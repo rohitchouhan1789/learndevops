@@ -18,5 +18,6 @@ jobs:
       - name: Working Directory
         run : pwd     
       - name: Run Tests
-        run: npm test 
+        run: cd npm_project && npm test
+        shell: bash 
     
