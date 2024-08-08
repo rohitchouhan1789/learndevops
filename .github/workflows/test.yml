@@ -10,14 +10,14 @@ jobs:
         uses: actions/setup-node@v4
         with: 
           node-version: 18
-      - name: Working Directory
-        run : pwd    
       - name: List Files
         run: ls -la
       - name: Navigate to Project Directory
-        run: cd learndevops/npm_project/   
+        run: cd npm_project   
+      - name: Working Directory
+        run : pwd     
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
       - name: Run Tests
         run: npm test 
     
