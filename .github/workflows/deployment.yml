@@ -32,7 +32,7 @@ jobs:
       - name: Navigate to Project Directory and Install NPM
         run: cd npm_project && npm install
       - name: Build
-        run: npm build
+        run: npm run build
       - name: Deploy
         run: echo Deployment Succesful        
     
