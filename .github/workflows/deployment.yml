@@ -22,6 +22,7 @@ jobs:
         shell: bash 
   deploy:
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: Pull the Code from Repositary
         uses: actions/checkout@v4
