@@ -1,4 +1,4 @@
-name: Test Project
+name: Deploy Project
 on: push
 jobs:
   test:
@@ -20,4 +20,19 @@ jobs:
       - name: Run Tests
         run: cd npm_project && npm test
         shell: bash 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull the Code from Repositary
+        uses: actions/checkout@v4
+      - name: Install NodeJS
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 18
+      - name: Navigate to Project Directory and Install NPM
+        run: cd npm_project && npm install
+      - name: Build
+        run: npm build
+      - name: Deploy
+        run: echo Deployment Succesful        
     
