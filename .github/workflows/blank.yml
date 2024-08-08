@@ -1,0 +1,11 @@
+name: Run Multiple Shell Commands
+on: workflow_dispatch
+jobs: 
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Greeting
+      # If you need to run multiple shell commands (or multi-line commands, e.g., for readability), you can easily do so by adding the pipe symbol (|) as a value after the run: key.
+        run: |  
+        echo "Hello World!"
+        echo "Done-bye!"
