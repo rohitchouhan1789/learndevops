@@ -1,14 +1,12 @@
-name: Open Issues
-on: 
-  issues:
-    types: [opened]
+name: Handel Issues
+on: issues
 
 jobs:
   Open_Issues:
     runs-on: ubuntu-latest
     steps:
       - name: Print output
-        run: echo "${{ toJson(github) }}"
+        run: echo "${{ toJson(github.event) }}"
 
       
     
