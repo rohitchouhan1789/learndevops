@@ -16,6 +16,6 @@ jobs:
       - name: Run Tests
         run: cd practice_project && npm test
       - name: Build
-        run: cd npm_project && npm run build
+        run: cd practice_project && npm run build
       - name: Deploy
         run: echo Deployment Successful        
