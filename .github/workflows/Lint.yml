@@ -1,5 +1,5 @@
 name: Lint Test and Depoly Project
-on: [workflow_dispatch, push]
+on: workflow_dispatch
 
 jobs:
   Lint:
