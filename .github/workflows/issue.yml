@@ -1,14 +1,14 @@
 name: Open Issues
 on: 
   issues:
-    types: [created]
+    types: [opened]
 
 jobs:
   Open Issues:
     runs-on: ubuntu-latest
     steps:
       - name: Print output
-        run: echo "${{github}}"
+        run: echo "${{ toJson(github) }}"
 
       
     
