@@ -1,0 +1,21 @@
+name: Lint Test and Depoly Project
+on: workflow_dispatch
+
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull the Code from Repository
+        uses: actions/checkout@v4
+      - name: Install NodeJS
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 18
+      - name: Navigate to Project Directory and Initate Lint
+        run: cd practice_project && npm install && npm run lint
+      - name: Run Tests
+        run: cd practice_project && npm test
+      - name: Build
+        run: cd practice_project && npm run build
+      - name: Deploy
+        run: echo Deployment Successful        
