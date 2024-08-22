@@ -4,7 +4,9 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Greeting
-        run: echo "Hello World!"
-      - name: Print Goodbye
-        run: echo "Done-bye!"
+      - name: Print workspace
+        run: echo "The workspace is located at ${{ github.workspace }}"
+        
+      - name: List files in workspace
+        run: ls -la ${{ github.workspace }}
+
