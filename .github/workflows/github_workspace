@@ -1,0 +1,17 @@
+name: GitHub Workspace
+
+on:
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print workspace
+        run: echo "The workspace is located at: ${{ github.workspace }}"
+
+      - name: List files in workspace
+        run: ls -la ${{ github.workspace }}
