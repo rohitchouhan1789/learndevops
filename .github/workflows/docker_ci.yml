@@ -37,6 +37,7 @@ jobs:
           login-server: ${{ secrets.ACR_SERVER }}
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
+      - run: pwd  
       # Build the Docker Image
       - run: |
           docker build ${{ github.workspace }}/${{ github.event.inputs.DockerPath }}/ -t ${{ secrets.ACR_SERVER }}/${{ github.event.inputs.ImageName }}:${{ github.event.inputs.ImageVersion }}
